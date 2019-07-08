@@ -37,10 +37,14 @@
 #' smoothing splines, specific for multiple test based method and MMP based method,
 #' default is 2
 #' @param model method to be implemented.
+#' @examples
+#' library(itlt)
+#' data <- ItltSimulation(250, 1:12, type = 2)
+#' ItltTree(data, as.formula(y~treatment), 1:12, paste0("X", 1:10))
 #' @return identified tree of partynode type
 ItltTree <-
   function(data,  # wide format and has the format of "y.name1, y.name2,....
-           fm,  # fm is of the format y.name ~ treatment.name + base covariates
+           fm,  # fm is of the format y.name ~ treatment.name
            tf,
            split.covs,  # could be both numerical indicator or variable names
            nknot = 5,

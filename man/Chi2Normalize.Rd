@@ -18,3 +18,6 @@ Chi2Normalize(t, n)
 The pruning procedure is proposed under the assumption that test statistics at
 each node are \chi^2(1) distributed.
 }
+\examples{
+Chi2Normalize(3, 5)
+}

@@ -63,3 +63,8 @@ based methods (avg, last-k) are also implemented.But the scalar based method
 needs to have the same data format (see data, fm, tf for details), otherwise
 regular code for interaction tree could be used
 }
+\examples{
+library(itlt)
+data <- ItltSimulation(250, 1:12, type = 2)
+ItltTree(data, as.formula(y~treatment), 1:12, paste0("X", 1:10))
+}
