@@ -9,7 +9,7 @@ GetGt <- function(nd, nknot.transform) {
   if (is.null(nd) || is.null(nd$split)) {
     return(0)
   } else if (nknot.transform != -1) {
-    score <- Chi2Nomalize(nd$split$info$score, nknot.transform)
+    score <- Chi2Normalize(nd$split$info$score, nknot.transform)
   } else {
     score <- nd$split$info$score
   }
@@ -45,7 +45,7 @@ GetGtNew <- function(nd, data, fm, tf, model, nknot, p.value = 1) {
         return(0)
       }
       if (model %in% c("bsgee", "bslme", "mmreg")) {
-        score <- Chi2Nomalize(score, nknot)
+        score <- Chi2Normalize(score, nknot)
       }
     } else {
       score <- it.scalar.score(data, fm, grp, p.value)

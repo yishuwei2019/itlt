@@ -110,7 +110,7 @@ ItltPartition <- function(
 
     # this is for pruning process
     if (model == "bsgee" || model == "bslme") {
-      max.score <- Chi2Nomalize(max.score, nknot)
+      max.score <- Chi2Normalize(max.score, nknot)
     }
 
     partysplit(

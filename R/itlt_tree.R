@@ -37,7 +37,6 @@
 #' smoothing splines, specific for multiple test based method and MMP based method,
 #' default is 2
 #' @param model method to be implemented.
-#'
 #' @return identified tree of partynode type
 ItltTree <-
   function(data,  # wide format and has the format of "y.name1, y.name2,....

@@ -5,9 +5,10 @@
 #'
 #' @param t original test statistic
 #' @param n original degree of freedom
-#'
+#' @examples
+#' Chi2Normalize(3, 5)
 #' @return \chi^2 test statistic of df(1) with the same significance level
-Chi2Nomalize <- function(t, n) {
+Chi2Normalize <- function(t, n) {
   if (n == 1) {
     return(t)
   }
