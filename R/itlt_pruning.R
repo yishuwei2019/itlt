@@ -179,7 +179,7 @@ BtPrune <-
            p.value,
            nCutpoints = 20,
            alpha = 2,  # spline penalization
-           lambdas = c(0, 2, 3, 4, log(nrow(data)), 30, 50, 100),
+           lambdas = c(0, 2, 3, 4, log(nrow(data)), log(nrow(data) * length(tf))),
            B = 20) {
     pp <- preprocess(data, fm, tf, nknot, model)
     data.p <- pp$data

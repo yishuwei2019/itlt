@@ -8,7 +8,7 @@
 #' @param type simulation setting (1: non-linearity, 2: periodicity,
 #' 3: non-linearity, 4: no heteorogeneity in treatment effect)
 #' @examples
-#' ItltSimulation1(250, 1:12)
+#' sample <- ItltSimulation1(250, 1:12)
 #' @return a simulated longitudinal dataset
 
 ItltSimulation1 <-
