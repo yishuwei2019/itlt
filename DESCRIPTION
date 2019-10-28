@@ -8,12 +8,8 @@ Authors@R:
            email = "yishuwei2019@u.northwestern.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: What the package does (one paragraph).
+Depends: R (>= 3.1.0), lme4, nlme, splines, partykit (>= 1.0-4)
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
-Imports: 
-    splines,
-    lme4,
-    nlme,
-    partykit

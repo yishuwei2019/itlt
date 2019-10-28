@@ -114,6 +114,25 @@ ItltTree <-
       terms = NULL
     )
 
+    # ret
+    ## as.constparty(ret)
+
+    tr.pruned <- ret
+    try({
+      tr.pruned <- BtPrune(
+        data = data,
+        tr = tr,
+        fm = fm,
+        tf = tf,
+        split.covs = split.covs,
+        nknot = nknot,
+        maxdepth = maxdepth,
+        nCutpoints = nCutpoints,
+        model = "bslme",
+        p.value = p.value
+      )
+      tr.pruned <- tr.pruned[[8]][[1]]
+    })
+
     ret
-    # as.constparty(ret)
   }
