@@ -30,5 +30,5 @@ a simulated longitudinal dataset
 Simulation for longitudinal datasets
 }
 \examples{
-ItltSimulation1(250, 1:12)
+sample <- ItltSimulation1(250, 1:12)
 }
