@@ -39,7 +39,7 @@
 #' @param model method to be implemented.
 #' @examples
 #' library(itlt)
-#' data <- ItltSimulation(250, 1:12, type = 2)
+#' data <- ItltSimulation1(250, 1:12, type = 2)
 #' ItltTree(data, as.formula(y~treatment), 1:12, paste0("X", 1:10))
 #' @return identified tree of partynode type
 ItltTree <-
