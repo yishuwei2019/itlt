@@ -31,19 +31,12 @@ bslme <- function(
 
   N.t <- length(tf)
   # there are inner.knot - 1 intervals inside time frame
-  # gap <- (tf[N.t] - tf[1]) / (nknot - 1)
-  # knots <-
-  #   c(seq(tf[1] - degree * gap, tf[N.t] + degree * gap, by = gap))
-  # B <- splineDesign(knots, tf, degree + 1)
-  # B <- B[, 2:(ncol(B) - 1)]
-  # B0 <- matrix(0, N.t, ncol(B))
-  # new basis system
   gap <- (tf[N.t] - tf[1]) / (nknot - 1)
-  knots <- seq(tf[1], tf[N.t], by = gap)
-  B <- bs(tf, knots = knots)
-  B <-  B[, 2:(ncol(B) - 1)]
+  knots <-
+    c(seq(tf[1] - degree * gap, tf[N.t] + degree * gap, by = gap))
+  B <- splineDesign(knots, tf, degree + 1)
+  B <- B[, 2:(ncol(B) - 1)]
   B0 <- matrix(0, N.t, ncol(B))
-
 
   # organize data by group indicator
   g <- rep(0, nrow(D.cov)) # 0 is left control(grp == 1, treat == 0)
@@ -117,6 +110,7 @@ bslme <- function(
     return(lrt)
   }
 }
+
 
 
 bsgee <- function(D.traj,
