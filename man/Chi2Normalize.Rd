@@ -2,7 +2,7 @@
 % Please edit documentation in R/itlt_chi2normalize.R
 \name{Chi2Normalize}
 \alias{Chi2Normalize}
-\title{Nomalizing a \chi^2 square statistic from df(n) to df(1)}
+\title{Nomalizing a chi^2 square statistic from df(n) to df(1)}
 \usage{
 Chi2Normalize(t, n)
 }
@@ -12,11 +12,11 @@ Chi2Normalize(t, n)
 \item{n}{original degree of freedom}
 }
 \value{
-\chi^2 test statistic of df(1) with the same significance level
+chi^2 test statistic of df(1) with the same significance level
 }
 \description{
 The pruning procedure is proposed under the assumption that test statistics at
-each node are \chi^2(1) distributed.
+each node are chi^2(1) distributed.
 }
 \examples{
 Chi2Normalize(3, 5)

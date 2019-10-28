@@ -1,13 +1,13 @@
-#' Nomalizing a \chi^2 square statistic from df(n) to df(1)
+#' Nomalizing a chi^2 square statistic from df(n) to df(1)
 #'
 #' The pruning procedure is proposed under the assumption that test statistics at
-#' each node are \chi^2(1) distributed.
+#' each node are chi^2(1) distributed.
 #'
 #' @param t original test statistic
 #' @param n original degree of freedom
 #' @examples
 #' Chi2Normalize(3, 5)
-#' @return \chi^2 test statistic of df(1) with the same significance level
+#' @return chi^2 test statistic of df(1) with the same significance level
 Chi2Normalize <- function(t, n) {
   if (n == 1) {
     return(t)

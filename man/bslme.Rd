@@ -21,7 +21,7 @@ is 1}
 \item{degree}{degree of spline coefficients, default is 3}
 }
 \value{
-(LRT) \chi^2 test statistic of df(nknot) under the mixed effects model
+(LRT) chi^2 test statistic of df(nknot) under the mixed effects model
 }
 \description{
 Mixed effects based model tests trajectories by testing model fitting.

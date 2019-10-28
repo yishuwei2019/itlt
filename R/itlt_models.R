@@ -13,7 +13,7 @@
 #' is 1
 #' @param degree degree of spline coefficients, default is 3
 #'
-#' @return (LRT) \chi^2 test statistic of df(nknot) under the mixed effects model
+#' @return (LRT) chi^2 test statistic of df(nknot) under the mixed effects model
 bslme <- function(
   D.traj,
   D.cov,
