@@ -134,5 +134,5 @@ ItltTree <-
       tr.pruned <- tr.pruned[[8]][[1]]
     })
 
-    ret
+    tr.pruned
   }
