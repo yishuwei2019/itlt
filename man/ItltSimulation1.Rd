@@ -4,7 +4,7 @@
 \alias{ItltSimulation1}
 \title{Simulation for longitudinal datasets}
 \usage{
-ItltSimulation1(N, tf, e = 0.05, p = 0, asigma = 0.1,
+ItltSimulation1(N, tf, e = 0.2, p = 0.2, asigma = 0.5,
   seed = "1234", type = 1)
 }
 \arguments{

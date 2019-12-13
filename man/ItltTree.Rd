@@ -67,4 +67,45 @@ regular code for interaction tree could be used
 library(itlt)
 data <- ItltSimulation1(250, 1:12, type = 2)
 ItltTree(data, as.formula(y~treatment), 1:12, paste0("X", 1:10))
+
+library("glmertree")
+library("splines")
+
+wide.to.long <- function(data, name, cov.names) {
+  y.names <-
+    colnames(data)[sapply(colnames(data), function(x) {
+      return(startsWith(x, name))
+    })]
+  y <- matrix(t(data[, y.names]))
+  N.time <- length(y.names)
+  cov <- data[rep(1:nrow(data), each = N.time), cov.names]
+  rownames(cov) <- NULL
+  result <- cbind(cov, y)
+  result <-
+    cbind(result, rep(0:(length(y.names) - 1), nrow(data)), rep(data$group, length(y.names)))
+  colnames(result)[c(ncol(result) - 1, ncol(result))] <-
+    c('time', 'group')
+
+  result <- result[!is.na(y),]
+
+  result
 }
+
+data <- ItltSimulation1(250, 1:12, type = 2)
+t <- colnames(data)
+data.long <- wide.to.long(data, "y", t[!startsWith(t, "y")])
+data.lmetree <-
+  lmertree(
+    as.formula(
+      paste0(
+        "y ~ treatment*bs(time, df=5, degree=3, intercept=FALSE) | id |",
+        paste0("X", 1:10, collapse = "+")
+      )
+    ),
+    cluster = id,
+    data = data.long,
+    maxdepth = 3,
+    alpha = .01
+  )$tree
+}
+
