@@ -117,7 +117,7 @@ ItltTree <-
     # ret
     ## as.constparty(ret)
 
-    tr.pruned <- ret
+    tr <- ret
     try({
       tr.pruned <- BtPrune(
         data = data,
