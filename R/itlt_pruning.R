@@ -224,7 +224,8 @@ BtPrune <-
         nCutpoints = nCutpoints,
         model = model,
         details = FALSE,
-        p.value = p.value
+        p.value = p.value,
+        need.prune = FALSE
       )
       prune.seq.b <- SplinePrune(tr.b, nknot.transform)
       for (jj in 1:length(alpha2)) {
