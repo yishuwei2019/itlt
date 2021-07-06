@@ -56,6 +56,7 @@ ItltTree <-
            maxdepth = 3,
            details = "TRUE",
            alpha = 2.5,
+           need.prune = TRUE,
            model = "bslme") {
     # data must have a column named "id"
     if (is.numeric(split.covs[1])) {
@@ -118,7 +119,7 @@ ItltTree <-
     ## as.constparty(ret)
 
     tr <- ret
-    if(maxdepth == 1) {
+    if(maxdepth == 1 || need.prune == False) {
       return(tr)
     }
     
