@@ -118,6 +118,10 @@ ItltTree <-
     ## as.constparty(ret)
 
     tr <- ret
+    if(maxdepth == 1) {
+      return(tr)
+    }
+    
     try({
       tr.pruned <- BtPrune(
         data = data,
